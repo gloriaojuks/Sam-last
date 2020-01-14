@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Dashboard Layout</title>
+    <link rel="stylesheet" href="/assets/css/materialdesignicons.min.css" />
+    <link rel="stylesheet" href="/assets/DataTables-1.10.20/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="/assets/style.css" />
+    <link rel="stylesheet" href="/assets/reset.css">
+</head>
+
+<body>
+    <div class=" h-full w-full bg-primary fixed flex">
+        <aside class="w-64 h-full sidebar" id="sidebar">
+            <div class=" flex items-end px-8 h-16">
+                <a href="/" class=""><img class="" width="126" height="35" src="/assets/img/logo.png" alt="" /></a>
+                <button class="inline-flex md:hidden h-10 items-center justify-center px-4 absolute top-0 right-0"
+                    onclick="sidebar.classList.toggle('open')">
+                    <i class="mdi mdi-close text-2xl"></i>
+                </button>
+            </div>
+            <div class="border-r border-gray-100 overflow-y-auto pt-12 px-8" style="height: calc(100% - 4rem);">
+                <a href="" class="sidebar-link">
+                    <i class="mdi mdi-view-dashboard"></i>
+                    <span>Dashboard</span>
+                </a>
+                <div class="mt-6">
+                    Members
+                </div>
+
+                <a href="" class="sidebar-link">
+                    <i class="mdi mdi-pencil"></i>
+                    <span>New Members</span>
+                </a>
+                <a href="" class="sidebar-link">
+                    <i class="mdi mdi-progress-clock"></i>
+                    <span>Update</span>
+                </a>
+                <a href="/admin-members.html" class="sidebar-link active">
+                    <i class="mdi mdi-account-group"></i>
+                    <span>View All</span>
+                </a>
+                <div class="mt-6">
+                    Payments
+                </div><a href="" class="sidebar-link">
+                    <i class="mdi mdi-timelapse"></i>
+                    <span>Payments Due</span>
+                </a>
+                <a href="" class="sidebar-link">
+                    <i class="mdi mdi-credit-card-outline"></i>
+                    <span>All</span>
+                </a>
+                <a href="" class="sidebar-link">
+                    <i class="mdi mdi-message-text"></i>
+                    <span>Messages</span>
+                </a>
+
+                <a href="" class="sidebar-link">
+                    <i class="mdi mdi-settings-box"></i>
+                    <span>Setting</span>
+                </a>
+            </div>
+        </aside>
+        <div class="h-full flex-1">
+            <header class="flex items-center pr-8 pl-2 h-16 justify-between w-full">
+                <button class="inline-flex md:hidden h-10 items-center justify-center px-4"
+                    onclick="sidebar.classList.toggle('open')">
+                    <i class="mdi mdi-menu text-2xl"></i>
+                </button>
+                <form
+                    class="hidden md:inline-flex lg:w-search-input h-10 bg-white rounded-lg overflow-y-auto shadow focus:shadow-md">
+                    <i class="mdi mdi-magnify h-full w-10 inline-flex justify-center items-center text-gray-400"></i>
+                    <input type="search" class="flex-1 h-full pr-4 outline-none" />
+                </form>
+                <div class="pr-4 flex">
+                    <div class="relative" data-dropdown>
+                        <button class=" w-10 h-10 inline-flex items-center justify-center" data-drop-toggle>
+                            <i class="mdi mdi-email text-2xl"></i>
+                        </button>
+                        <div class="shadow-md absolute bg-white w-64 rounded hidden right-0 overflow-hidden"
+                            data-drop-content>
+                            <div class="p-2 bg-l-orange text-white">
+                                Messages
+                            </div>
+                            <div class="p-2 flex w-full  hover:bg-gray-100 cursor-pointer">
+                                <div class="w-10 h-10 rounded-lg overflow-hidden">
+                                    <img class="w-full h-full" src="/assets/img/girl-smilling.jpeg" />
+                                </div>
+                                <div class="pl-4 flex-1 overflow-hidden">
+                                    <div class=" text-sm">Frederick Damasus</div>
+                                    <p class="truncate w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Quae, consequatur!
+                                    </p>
+                                    <time class=" text-xs">38 min ago </time>
+                                </div>
+                            </div>
+                            <div class="p-2 flex w-full  hover:bg-gray-100 cursor-pointer">
+                                <div class="w-10 h-10 rounded-lg overflow-hidden">
+                                    <img class="w-full h-full" src="/assets/img/girl-smilling.jpeg" />
+                                </div>
+                                <div class="pl-4 flex-1 overflow-hidden">
+                                    <div class=" text-sm">Frederick Damasus</div>
+                                    <p class="truncate w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Quae, consequatur!
+                                    </p>
+                                    <time class=" text-xs">38 min ago </time>
+                                </div>
+                            </div>
+                            <div class="p-2 flex w-full  hover:bg-gray-100 cursor-pointer">
+                                <div class="w-10 h-10 rounded-lg overflow-hidden">
+                                    <img class="w-full h-full" src="/assets/img/girl-smilling.jpeg" />
+                                </div>
+                                <div class="pl-4 flex-1 overflow-hidden">
+                                    <div class=" text-sm">Frederick Damasus</div>
+                                    <p class="truncate w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Quae, consequatur!
+                                    </p>
+                                    <time class=" text-xs">38 min ago </time>
+                                </div>
+                            </div>
+                            <div class="py-2 text-center">
+                                <a href="">See All</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative" data-dropdown>
+                        <button class=" w-10 h-10 inline-flex items-center justify-center" data-drop-toggle>
+                            <i class="mdi mdi-bell text-2xl"></i>
+                        </button>
+                        <div class="shadow-md absolute bg-white w-64 rounded hidden right-0 overflow-hidden"
+                            data-drop-content>
+                            <div class="p-2 bg-l-orange text-white">
+                                Notifications
+                            </div>
+                            <div class="p-2 w-full overflow-hidden hover:bg-gray-100 cursor-pointer">
+                                <p class="truncate w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Quae, consequatur!
+                                </p>
+                                <time class=" text-xs">38 min ago </time>
+                            </div>
+                            <div class="p-2 w-full overflow-hidden hover:bg-gray-100 cursor-pointer">
+                                <p class="truncate w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Quae, consequatur!
+                                </p>
+                                <time class=" text-xs">38 min ago </time>
+                            </div>
+                            <div class="p-2 w-full overflow-hidden hover:bg-gray-100 cursor-pointer">
+                                <p class="truncate w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Quae, consequatur!
+                                </p>
+                                <time class=" text-xs">38 min ago </time>
+                            </div>
+                            <div class="py-2 text-center">
+                                <a href="">See All</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="ml-4 relative" data-dropdown>
+                        <div class="inline-flex" data-drop-toggle>
+                            <div class="w-10 h-10 rounded-lg overflow-hidden">
+                                <img class="w-full h-full" src="/assets/img/girl-smilling.jpeg" />
+                            </div>
+                            <div class="pl-4 pr-6 ">
+                                <div class=" text-sm">Frederick Damasus</div>
+                                <div class=" text-xs">member</div>
+                                <i class="mdi mdi-chevron-down absolute text-xl right-0" style="top: 40%;"></i>
+                            </div>
+                        </div>
+                        <div class="drop-content hidden" data-drop-content>
+                            <a href="#" class="w-full inline-flex h-8  hover:bg-gray-200 px-4 items-center">Sign out</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="pl-2 pr-8 pt-4 w-full overflow-y-auto" style="height: calc(100% - 80px);">
+                <div class="py-4">
+                    <h2 class="text-xl">Members</h2>
+                </div>
+                <main class="w-full">
+                    <div class=" w-full h-full bg-white p-6 shadow rounded">
+                        <div class="mb-5">
+                            <h3 class=" text-lg font-light">Pending Registration</h3>
+                            <p class="font-thin text-sm">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
+                        </div>
+                        <table id="members" class="display cell-border w-full">
+                            <thead>
+                                <tr>
+                                    <th>Full Name</th>
+                                    <th>Sex</th>
+                                    <th>Phone</th>
+                                    <th>Username</th>
+                                    <th>Amount</th>
+                                    <th>Prof of Payment</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Tiger Nixon</td>
+                                    <td>System Architect</td>
+                                    <td>Edinburgh</td>
+                                    <td>61</td>
+                                    <td>2011/04/25</td>
+                                    <td><a href="#">View</a></td>
+                                    <td>
+                                        <div class="flex">
+                                            <a href="#" class=" w-1/2 text-green-600 px-1">Approve</a>
+                                            <a href="#" class=" w-1/2 text-red-600 px-1">Decline</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Garrett Winters</td>
+                                    <td>Accountant</td>
+                                    <td>Tokyo</td>
+                                    <td>63</td>
+                                    <td>2011/07/25</td>
+                                    <td><a href="#">View</a></td>
+                                    <td>
+                                        <div class="flex">
+                                            <a href="#" class=" w-1/2 text-green-600 px-1">Approve</a>
+                                            <a href="#" class=" w-1/2 text-red-600 px-1">Decline</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Ashton Cox</td>
+                                    <td>Junior Technical Author</td>
+                                    <td>San Francisco</td>
+                                    <td>66</td>
+                                    <td>2009/01/12</td>
+                                    <td><a href="#">View</a></td>
+                                    <td>
+                                        <div class="flex">
+                                            <a href="#" class=" w-1/2 text-green-600 px-1">Approve</a>
+                                            <a href="#" class=" w-1/2 text-red-600 px-1">Decline</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Cedric Kelly</td>
+                                    <td>Senior Javascript Developer</td>
+                                    <td>Edinburgh</td>
+                                    <td>22</td>
+                                    <td>2012/03/29</td>
+                                    <td><a href="#">View</a></td>
+                                    <td>
+                                        <div class="flex">
+                                            <a href="#" class=" w-1/2 text-green-600 px-1">Approve</a>
+                                            <a href="#" class=" w-1/2 text-red-600 px-1">Decline</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Airi Satou</td>
+                                    <td>Accountant</td>
+                                    <td>Tokyo</td>
+                                    <td>33</td>
+                                    <td>2008/11/28</td>
+                                    <td><a href="#">View</a></td>
+                                    <td>
+                                        <div class="flex">
+                                            <a href="#" class=" w-1/2 text-green-600 px-1">Approve</a>
+                                            <a href="#" class=" w-1/2 text-red-600 px-1">Decline</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Brielle Williamson</td>
+                                    <td>Integration Specialist</td>
+                                    <td>New York</td>
+                                    <td>61</td>
+                                    <td>2012/12/02</td>
+                                    <td><a href="#">View</a></td>
+                                    <td>
+                                        <div class="flex">
+                                            <a href="#" class=" w-1/2 text-green-600 px-1">Approve</a>
+                                            <a href="#" class=" w-1/2 text-red-600 px-1">Decline</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Herrod Chandler</td>
+                                    <td>Sales Assistant</td>
+                                    <td>San Francisco</td>
+                                    <td>59</td>
+                                    <td>2012/08/06</td>
+                                    <td><a href="#">View</a></td>
+                                    <td>
+                                        <div class="flex">
+                                            <a href="#" class=" w-1/2 text-green-600 px-1">Approve</a>
+                                            <a href="#" class=" w-1/2 text-red-600 px-1">Decline</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Rhona Davidson</td>
+                                    <td>Integration Specialist</td>
+                                    <td>Tokyo</td>
+                                    <td>55</td>
+                                    <td>2010/10/14</td>
+                                    <td><a href="#">View</a></td>
+                                    <td>
+                                        <div class="flex">
+                                            <a href="#" class=" w-1/2 text-green-600 px-1">Approve</a>
+                                            <a href="#" class=" w-1/2 text-red-600 px-1">Decline</a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Full Name</th>
+                                    <th>Sex</th>
+                                    <th>Phone</th>
+                                    <th>Username</th>
+                                    <th>Amount</th>
+                                    <th>Prof of Payment</th>
+                                    <th>Action</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/js/jquery-3.4.1.min.js"></script>
+    <script src="/assets/DataTables-1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="/assets/js/dropdown.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#members').DataTable();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+body {
+  color: #33343e;
+}
+
+a {
+  color: #f56937;
+}
+
+i.mdi {
+  line-height: 0;
+}
+
+.local-shadow {
+  -webkit-box-shadow: 0px 3px 50px #00000014;
+          box-shadow: 0px 3px 50px #00000014;
+}
+
+.form-field {
+  @apply mb-4;
+}
+
+.form-field input,
+.form-field select {
+  @apply px-4 py-3 block border border-gray-300 w-full outline-none bg-transparent;
+}
+
+.form-field input.error,
+.form-field select.error {
+  @apply border border-solid border-red-400;
+}
+
+.form-field input:hover,
+.form-field select:hover {
+  @apply border-orange-600;
+}
+
+.form-field label {
+  @apply mb-1 block;
+}
+
+.form-field .error-msg {
+  @apply pt-1 text-red-500 text-xs;
+}
+
+.form-button {
+  @apply flex items-center justify-center py-3 w-full bg-ui-orange text-white;
+}
+
+.form-button:disabled {
+  @apply cursor-not-allowed opacity-50 bg-gray-500;
+}
+
+.sidebar-link {
+  @apply h-8 flex items-center text-base;
+}
+
+.sidebar-link:not(.active) {
+  @apply text-gray-700;
+}
+
+.sidebar-link:hover {
+  letter-spacing: 1px;
+  @apply text-l-orange;
+}
+
+.sidebar-link > .mdi {
+  @apply mr-6 text-xl;
+}
+
+.dashboard-table td {
+  @apply h-16 px-10 font-light;
+}
+
+.dashboard-table th {
+  @apply text-left px-10 font-light h-12;
+}
+
+.dashboard-table tr {
+  @apply border-b border-t border-gray-300;
+}
+
+.sidebar {
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: absolute;
+    left: -120%;
+    -webkit-box-shadow: 5px 0px 10px #b0bec5;
+            box-shadow: 5px 0px 10px #b0bec5;
+    @apply bg-white h-full z-30;
+  }
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.dataTables_filter input {
+  border-bottom: 1px solid #ccc;
+}
+
+.mou-table th {
+  @apply px-4 rounded font-normal mb-4;
+}
+
+.mou-table thead tr {
+  @apply border border-gray-400 h-8 font-normal;
+}
+
+.mou-table tbody tr {
+  @apply h-10;
+}
+
+.mou-table tbody td {
+  @apply px-4 text-gray-600;
+}
+
+.mou-table tbody td:last-child {
+  @apply text-gray-500;
+}
+
+.top-up .pay-type-toggle {
+  @apply w-1/2 h-16 inline-flex items-center justify-center bg-gray-200 cursor-pointer;
+}
+
+.top-up .pay-type-toggle.active {
+  @apply bg-white;
+  -webkit-box-shadow: 0px 1px 8px #142e6e1a;
+          box-shadow: 0px 1px 8px #142e6e1a;
+}
+
+.drop-content {
+  @apply py-4 shadow-md absolute bg-white w-full rounded right-0;
+  min-width: 120px;
+}
+/*# sourceMappingURL=style.css.map */

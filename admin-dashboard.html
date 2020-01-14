@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Dashboard Layout</title>
+    <link rel="stylesheet" href="/assets/css/materialdesignicons.min.css" />
+    <link rel="stylesheet" href="/assets/style.css" />
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+
+<body>
+    <div class=" h-full w-full bg-primary fixed flex">
+        <aside class="sidebar w-64 h-full" id="sidebar">
+            <div class="flex items-end px-8 h-16 relative">
+                <a href="/" class=""><img class="" width="126" height="35" src="/assets/img/logo.png" alt="" /></a>
+                <button class="inline-flex md:hidden h-10 items-center justify-center px-4 absolute top-0 right-0"
+                    onclick="sidebar.classList.toggle('open')">
+                    <i class="mdi mdi-close text-2xl"></i>
+                </button>
+            </div>
+
+            <div class="overflow-y-auto pt-12 px-8" style="height: calc(100% - 4rem);">
+                <a href="" class="sidebar-link active">
+                    <i class="mdi mdi-view-dashboard"></i>
+                    <span>Dashboard</span>
+                </a>
+                <div class="mt-6">
+                    MY ACCOUNT
+                </div>
+                <a href="" class="sidebar-link">
+                    <i class="mdi mdi-account-card-details"></i>
+                    <span>My Profile</span>
+                </a>
+                <a href="" class="sidebar-link">
+                    <i class="mdi mdi-pencil"></i>
+                    <span>New Account</span>
+                </a>
+                <a href="" class="sidebar-link">
+                    <i class="mdi mdi-wallet"></i>
+                    <span>Account Overview</span>
+                </a>
+                <a href="/user-top-up.html" class="sidebar-link">
+                    <i class="mdi mdi-arrow-up-bold-circle"></i>
+                    <span>Top Up</span>
+                </a>
+                <div class="mt-6">
+                    MY Money
+                </div>
+                <a href="" class="sidebar-link">
+                    <i class="mdi mdi-cash"></i>
+                    <span>Payouts</span>
+                </a>
+                <a href="" class="sidebar-link">
+                    <i class="mdi mdi-cash"></i>
+                    <span>Deposits</span>
+                </a>
+                <div class="mt-6">
+                    MY Document
+                </div>
+                <a href="/user-mou.html" class="sidebar-link">
+                    <i class="mdi mdi-file-document"></i>
+                    <span>MOU</span>
+                </a>
+                <div class="mt-6">
+                    CLIENT SUPPORT
+                </div>
+                <a href="" class="sidebar-link">
+                    <i class="mdi mdi-message-text"></i>
+                    <span>Live Chat</span>
+                </a>
+            </div>
+        </aside>
+        <div class="h-full flex-1">
+            <header class="flex items-center pr-8 pl-2 h-16 justify-between w-full">
+                <button class="inline-flex md:hidden h-10 items-center justify-center px-4"
+                    onclick="sidebar.classList.toggle('open')">
+                    <i class="mdi mdi-menu text-2xl"></i>
+                </button>
+                <form
+                    class="hidden md:inline-flex lg:w-search-input h-10 bg-white rounded-lg overflow-y-auto shadow focus:shadow-md">
+                    <i class="mdi mdi-magnify h-full w-10 inline-flex justify-center items-center text-gray-400"></i>
+                    <input type="search" class="flex-1 h-full pr-4 outline-none" />
+                </form>
+                <div class="pr-4 flex">
+                    <div class="relative" data-dropdown>
+                        <button class=" w-10 h-10 inline-flex items-center justify-center" data-drop-toggle>
+                            <i class="mdi mdi-email text-2xl"></i>
+                        </button>
+                        <div class="shadow-md absolute bg-white w-64 rounded hidden right-0 overflow-hidden"
+                            data-drop-content>
+                            <div class="p-2 bg-l-orange text-white">
+                                Messages
+                            </div>
+                            <div class="p-2 flex w-full  hover:bg-gray-100 cursor-pointer">
+                                <div class="w-10 h-10 rounded-lg overflow-hidden">
+                                    <img class="w-full h-full" src="/assets/img/girl-smilling.jpeg" />
+                                </div>
+                                <div class="pl-4 flex-1 overflow-hidden">
+                                    <div class=" text-sm">Frederick Damasus</div>
+                                    <p class="truncate w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Quae, consequatur!
+                                    </p>
+                                    <time class=" text-xs">38 min ago </time>
+                                </div>
+                            </div>
+                            <div class="p-2 flex w-full  hover:bg-gray-100 cursor-pointer">
+                                <div class="w-10 h-10 rounded-lg overflow-hidden">
+                                    <img class="w-full h-full" src="/assets/img/girl-smilling.jpeg" />
+                                </div>
+                                <div class="pl-4 flex-1 overflow-hidden">
+                                    <div class=" text-sm">Frederick Damasus</div>
+                                    <p class="truncate w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Quae, consequatur!
+                                    </p>
+                                    <time class=" text-xs">38 min ago </time>
+                                </div>
+                            </div>
+                            <div class="p-2 flex w-full  hover:bg-gray-100 cursor-pointer">
+                                <div class="w-10 h-10 rounded-lg overflow-hidden">
+                                    <img class="w-full h-full" src="/assets/img/girl-smilling.jpeg" />
+                                </div>
+                                <div class="pl-4 flex-1 overflow-hidden">
+                                    <div class=" text-sm">Frederick Damasus</div>
+                                    <p class="truncate w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Quae, consequatur!
+                                    </p>
+                                    <time class=" text-xs">38 min ago </time>
+                                </div>
+                            </div>
+                            <div class="py-2 text-center">
+                                <a href="">See All</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative" data-dropdown>
+                        <button class=" w-10 h-10 inline-flex items-center justify-center" data-drop-toggle>
+                            <i class="mdi mdi-bell text-2xl"></i>
+                        </button>
+                        <div class="shadow-md absolute bg-white w-64 rounded hidden right-0 overflow-hidden"
+                            data-drop-content>
+                            <div class="p-2 bg-l-orange text-white">
+                                Notifications
+                            </div>
+                            <div class="p-2 w-full overflow-hidden hover:bg-gray-100 cursor-pointer">
+                                <p class="truncate w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Quae, consequatur!
+                                </p>
+                                <time class=" text-xs">38 min ago </time>
+                            </div>
+                            <div class="p-2 w-full overflow-hidden hover:bg-gray-100 cursor-pointer">
+                                <p class="truncate w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Quae, consequatur!
+                                </p>
+                                <time class=" text-xs">38 min ago </time>
+                            </div>
+                            <div class="p-2 w-full overflow-hidden hover:bg-gray-100 cursor-pointer">
+                                <p class="truncate w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Quae, consequatur!
+                                </p>
+                                <time class=" text-xs">38 min ago </time>
+                            </div>
+                            <div class="py-2 text-center">
+                                <a href="">See All</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="ml-4 relative" data-dropdown>
+                        <div class="inline-flex" data-drop-toggle>
+                            <div class="w-10 h-10 rounded-lg overflow-hidden">
+                                <img class="w-full h-full" src="/assets/img/girl-smilling.jpeg" />
+                            </div>
+                            <div class="pl-4 pr-6 ">
+                                <div class=" text-sm">Frederick Damasus</div>
+                                <div class=" text-xs">member</div>
+                                <i class="mdi mdi-chevron-down absolute text-xl right-0" style="top: 40%;"></i>
+                            </div>
+                        </div>
+                        <div class="drop-content hidden" data-drop-content>
+                            <a href="#" class="w-full inline-flex h-8  hover:bg-gray-200 px-4 items-center">Sign out</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="pl-2 pr-8 pt-4 w-full overflow-y-auto" style="height: calc(100% - 80px);">
+                <div class="h-8 w-full bg-l-orange"></div>
+                <div class="py-4">
+                    <h2 class="text-xl">Dashboard</h2>
+                </div>
+                <main class="w-full h-full flex flex-wrap mb-8">
+                    <div class="lg:w-1/2 w-full">
+                        <div class="flex w-full justify-between flex-wrap">
+                            <div
+                                class="mb-6 bg-white w-f-half shadow rounded-lg h-40 p-4 flex flex-col justify-between">
+                                <div>
+                                    <span class=" text-sm font-light">Total Registered Members</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class=" text-2xl font-semibold font-sans">1,200</span>
+                                    <span
+                                        class="text-2xl h-12 w-12 bg-red-200 inline-flex justify-center items-center rounded-full">
+                                        <i class="mdi mdi-account text-red-500"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div
+                                class="mb-6 bg-white w-f-half shadow rounded-lg h-40 p-4 flex flex-col justify-between">
+                                <div>
+                                    <span class=" text-sm font-light">Total Pending Registrations</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class=" text-2xl font-semibold font-sans">10</span>
+                                    <span
+                                        class="text-2xl h-12 w-12 bg-yellow-300 inline-flex justify-center items-center rounded-full">
+                                        <i class="mdi mdi-account-question text-yellow-700"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div
+                                class="mb-6 bg-white w-f-half shadow rounded-lg h-40 p-4 flex flex-col justify-between">
+                                <div>
+                                    <span class=" text-sm font-light">Total Payouts</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class=" text-2xl font-semibold font-sans">1,200</span>
+                                    <span
+                                        class="text-2xl h-12 w-12 bg-green-200 inline-flex justify-center items-center rounded-full">
+                                        <i class="mdi mdi-cash text-green-500"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div
+                                class="mb-6 bg-white w-f-half shadow rounded-lg h-40 p-4 flex flex-col justify-between">
+                                <div>
+                                    <span class=" text-sm font-light">Total Pending Payments</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class=" text-2xl font-semibold font-sans">₦900,000</span>
+                                    <span
+                                        class="text-2xl h-12 w-12 bg-yellow-300 inline-flex justify-center items-center rounded-full">
+                                        <i class="mdi mdi-cash text-yellow-700"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div
+                                class="mb-6 bg-white w-f-half shadow rounded-lg h-40 p-4 flex flex-col justify-between">
+                                <div>
+                                    <span class=" text-sm font-light">Total Staff/Users</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class=" text-2xl font-semibold font-sans">1,200</span>
+                                    <span
+                                        class="text-2xl h-12 w-12 bg-blue-200 inline-flex justify-center items-center rounded-full">
+                                        <i class="mdi mdi-account-group text-blue-700"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div
+                                class="mb-6 bg-white w-f-half shadow rounded-lg h-40 p-4 flex flex-col justify-between">
+                                <div>
+                                    <span class=" text-sm font-light">Total Locations</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class=" text-2xl font-semibold font-sans">10</span>
+                                    <span
+                                        class="text-2xl h-12 w-12 bg-red-300 inline-flex justify-center items-center rounded-full">
+                                        <i class="mdi mdi-office-building text-red-700"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shadow rounded-lg w-full bg-white pb-4">
+                            <div class="p-4">Investors by Location</div>
+
+                            <div id="locations"></div>
+                        </div>
+                        <div class="shadow rounded-lg w-full bg-white pb-4 mt-4">
+                            <div class="p-4">Top Investors</div>
+
+                            <div id="investors"></div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 w-full lg:pl-6">
+                        <div class="shadow rounded-lg bg-white w-full pt-4 pb-8 pl-4">
+                            <div class="py-4">Recent Payments</div>
+                            <div class="border-b border-gray-300 h-16 flex items-center px-4 font-light">
+                                <div class="flex items-center justify-center pr-4">
+                                    <span class="h-10 w-10 rounded-full flex items-center justify-center bg-gray-300"><i
+                                            class="mdi mdi-refresh"></i></span>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex justify-between">
+                                        <span>Deposit from Fred</span><span class=" text-green-600">20,000</span>
+                                    </div>
+                                    <div class="flex justify-between text-sm">
+                                        <span>5 march, 18:33</span><span>NGN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border-b border-gray-300 h-16 flex items-center px-4 font-light">
+                                <div class="flex items-center justify-center pr-4">
+                                    <span
+                                        class="h-10 w-10 rounded-full flex items-center justify-center bg-green-200"><i
+                                            class="mdi mdi-check text-green-500"></i></span>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex justify-between">
+                                        <span>Deposit from Fred</span><span class=" text-red-700">20,000</span>
+                                    </div>
+                                    <div class="flex justify-between text-sm">
+                                        <span>5 march, 18:33</span><span>NGN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border-b border-gray-300 h-16 flex items-center px-4 font-light">
+                                <div class="flex items-center justify-center pr-4">
+                                    <span
+                                        class="h-10 w-10 rounded-full flex items-center justify-center bg-green-200"><i
+                                            class="mdi mdi-check text-green-500"></i></span>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex justify-between">
+                                        <span>Deposit from Fred</span><span class=" text-green-600">20,000</span>
+                                    </div>
+                                    <div class="flex justify-between text-sm">
+                                        <span>5 march, 18:33</span><span>NGN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border-b border-gray-300 h-16 flex items-center px-4 font-light">
+                                <div class="flex items-center justify-center pr-4">
+                                    <span
+                                        class="h-10 w-10 rounded-full flex items-center justify-center bg-green-200"><i
+                                            class="mdi mdi-check text-green-500"></i></span>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex justify-between">
+                                        <span>Deposit from Fred</span><span class=" text-green-600">20,000</span>
+                                    </div>
+                                    <div class="flex justify-between text-sm">
+                                        <span>5 march, 18:33</span><span>NGN</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full shadow rounded-lg bg-white mt-6 pb-2 px-4">
+                            <div class="h-16 flex items-center justify-between ">
+                                <span>Members</span>
+                                <a class=" text-gray-700" href="#">See all</a>
+                            </div>
+                            <table class="w-full border-collapse">
+                                <thead>
+                                    <tr class=" font-thin">
+                                        <th>&nbsp;</th>
+                                        <th class="text-left font-thin">Name</th>
+                                        <th class="text-left font-thin">Sex</th>
+                                        <th class="text-left font-thin">Location</th>
+                                        <th class="text-left font-thin">Email</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="h-16">
+                                        <td>
+                                            <div class="w-10 h-10 rounded-full overflow-hidden">
+                                                <img class="w-full h-full" src="/assets/img/girl-smilling.jpeg" />
+                                            </div>
+                                        </td>
+                                        <td class="text-xs font-light">Frederick Damasus</td>
+                                        <td class="text-xs font-light">Male</td>
+                                        <td class="text-xs font-light">Lagos, Nigeria</td>
+                                        <td class="text-xs font-light">Frederick@mail.com</td>
+                                    </tr>
+                                    <tr class="h-16">
+                                        <td>
+                                            <div class="w-10 h-10 rounded-full overflow-hidden">
+                                                <img class="w-full h-full" src="/assets/img/girl-smilling.jpeg" />
+                                            </div>
+                                        </td>
+                                        <td class="text-xs font-light">Nicole Darwin</td>
+                                        <td class="text-xs font-light">Male</td>
+                                        <td class="text-xs font-light">Lagos, Nigeria</td>
+                                        <td class="text-xs font-light">Frederick@mail.com</td>
+                                    </tr>
+                                    <tr class="h-16">
+                                        <td>
+                                            <div class="w-10 h-10 rounded-full overflow-hidden">
+                                                <img class="w-full h-full" src="/assets/img/girl-smilling.jpeg" />
+                                            </div>
+                                        </td>
+                                        <td class="text-xs font-light">John James</td>
+                                        <td class="text-xs font-light">Male</td>
+                                        <td class="text-xs font-light">Lagos, Nigeria</td>
+                                        <td class="text-xs font-light">Frederick@mail.com</td>
+                                    </tr>
+                                    <tr class="h-16">
+                                        <td>
+                                            <div class="w-10 h-10 rounded-full overflow-hidden">
+                                                <img class="w-full h-full" src="/assets/img/girl-smilling.jpeg" />
+                                            </div>
+                                        </td>
+                                        <td class="text-xs font-light">Frederick Damasus</td>
+                                        <td class="text-xs font-light">Male</td>
+                                        <td class="text-xs font-light">Lagos, Nigeria</td>
+                                        <td class="text-xs font-light">Frederick@mail.com</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="w-full shadow rounded-lg bg-white mt-6 pb-2 px-4">
+                            <div class="h-16 flex items-center justify-between ">
+                                <span>Staff/Users</span>
+                                <a class=" text-gray-700" href="#">See all</a>
+                            </div>
+                            <table class="w-full border-collapse">
+                                <thead>
+                                    <tr class=" font-thin">
+                                        <th>&nbsp;</th>
+                                        <th class="text-left font-thin">Name</th>
+                                        <th class="text-left font-thin">Sex</th>
+                                        <th class="text-left font-thin">Location</th>
+                                        <th class="px-6"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="h-16">
+                                        <td>
+                                            <div class="w-10 h-10 rounded-full overflow-hidden">
+                                                <img class="w-full h-full" src="/assets/img/girl-smilling.jpeg" />
+                                            </div>
+                                        </td>
+                                        <td class="text-xs font-light">Frederick Damasus</td>
+                                        <td class="text-xs font-light">Male</td>
+                                        <td class="text-xs font-light">Lagos, Nigeria</td>
+                                        <td class="text-xs font-light">&nbsp;</td>
+                                    </tr>
+                                    <tr class="h-16">
+                                        <td>
+                                            <div class="w-10 h-10 rounded-full overflow-hidden">
+                                                <img class="w-full h-full" src="/assets/img/girl-smilling.jpeg" />
+                                            </div>
+                                        </td>
+                                        <td class="text-xs font-light">Nicole Darwin</td>
+                                        <td class="text-xs font-light">Male</td>
+                                        <td class="text-xs font-light">Lagos, Nigeria</td>
+                                        <td class="text-xs font-light">&nbsp;</td>
+                                    </tr>
+                                    <tr class="h-16">
+                                        <td>
+                                            <div class="w-10 h-10 rounded-full overflow-hidden">
+                                                <img class="w-full h-full" src="/assets/img/girl-smilling.jpeg" />
+                                            </div>
+                                        </td>
+                                        <td class="text-xs font-light">John James</td>
+                                        <td class="text-xs font-light">Male</td>
+                                        <td class="text-xs font-light">Lagos, Nigeria</td>
+                                        <td class="text-xs font-light">&nbsp;</td>
+                                    </tr>
+                                    <tr class="h-16">
+                                        <td>
+                                            <div class="w-10 h-10 rounded-full overflow-hidden">
+                                                <img class="w-full h-full" src="/assets/img/girl-smilling.jpeg" />
+                                            </div>
+                                        </td>
+                                        <td class="text-xs font-light">Frederick Damasus</td>
+                                        <td class="text-xs font-light">Male</td>
+                                        <td class="text-xs font-light">Lagos, Nigeria</td>
+                                        <td class="text-xs font-light">&nbsp;</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/js/dropdown.js"></script>
+    <script>
+        google.charts.load('current', { packages: ['corechart', 'bar'] });
+        google.charts.setOnLoadCallback(drawBasic);
+
+        function drawBasic() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['City', 'Total Users', { role: 'style' }],
+                ['New York City, NY', 10, '#f56937'],
+                ['Los Angeles, CA', 20, '#f56937'],
+                ['Chicago, IL', 300, '#f56937'],
+                ['Houston, TX', 12, '#f56937'],
+                ['Philadelphia, PA', 320, '#f56937']
+            ]);
+
+            var options = {
+                title: 'Investors by Location',
+                chartArea: { width: '50%' },
+                hAxis: {
+                    title: 'Total Users',
+                    minValue: 0
+                },
+                vAxis: {
+                    title: 'City'
+                }
+            };
+
+            var chart = new google.visualization.BarChart(document.getElementById('locations'));
+
+            chart.draw(data, options);
+        }
+
+    </script>
+    <script>
+        google.charts.load('current', { packages: ['corechart', 'bar'] });
+        google.charts.setOnLoadCallback(drawBasic);
+
+        function drawBasic() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['Investors', 'Amount', { role: 'style' }],
+                ['John James', 600000, '#f56937'],
+                ['Adam Sanders', 540000, '#f56937'],
+                ['Mr Robot', 480000, '#f56937'],
+                ['Fred damasus', 420000, '#f56937'],
+                ['James brown', 340000, '#f56937'],
+                ['Clark kent', 320000, '#f56937'],
+                ['Darth vadert', 280000, '#f56937'],
+                ['Lord Thanos', 220000, '#f56937'],
+                ['Chris Do', 180000, '#f56937'],
+                ['Diana Prince', 120000, '#f56937']
+            ]);
+
+
+            var chart = new google.visualization.ColumnChart(
+                document.getElementById('investors'));
+
+            chart.draw(data);
+        }
+
+    </script>
+</body>
+
+</html>

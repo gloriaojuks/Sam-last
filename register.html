@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Register</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body class="text-gray-700">
+  <div class="container flex items-center w-full h-full justify-center mx-auto my-10 flex-col">
+    <div class="mb-10">
+      <a href=""><img src="assets/img/logo.png" alt="Logo" /></a>
+    </div>
+    <div class="mx-2 md:mx-8 my-10 relative w-full sm:w-4/5 h-full">
+      <div class="w-full h-auto absolute mb-8">
+        <div class="local-shadow px-8 pb-8">
+          <div class=" flex w-full bg-transparent relative" style="top: -2.9em;">
+            <div class="w-1/2 flex justify-end">
+              <span data-target="#with-paystack"
+                class="plan w-full text-base sm:w-2/3 h-full sm:text-lg py-2 h-full inline-flex justify-center mr-2 bg-white"><img
+                  src="assets/svg/paystack-logo.svg" width="40" style="height:30px"" alt=" Paystack logo" />
+                Paystack</span>
+            </div>
+            <div class="w-1/2 flex">
+              <span data-target="#with-bank"
+                class="plan w-full text-base sm:w-2/3 h-full sm:text-lg py-2 inline-flex justify-center ml-2 items-center  bg-gray-200">
+                Bank Deposit/Transfer</span>
+            </div>
+          </div>
+          <div class="flex flex-wrap">
+            <div class=" w-full sm:w-1/2 flex justify-center mb-4">
+              <div class=" md:w-2/3  flex flex-col items-center">
+                <button class="form-button">Proceed to Payment</button>
+                <div class=" w-3/5 py-8 mt-16">
+                  <img src="assets/svg/undraw_business_plan_5i9d.svg" width="" alt="" />
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Voluptates quisquam ab animi, sequi minima corporis
+                  inventore exercitationem id minus consequatur ipsum nemo?
+                  Expedita dolore tenetur quas, suscipit possimus odio atque
+                  maiores itaque vero autem dolorem sed inventore consequatur
+                  repudiandae debitis vitae libero, distinctio aliquid esse
+                  aliquam? Ratione magni nobis unde officia repellendus harum.
+                </p>
+              </div>
+            </div>
+            <div class="w-full sm:w-1/2">
+              <form action="" class="w-full h-full px-4 md:w-4/5" id="with-paystack">
+                <div class="form-field">
+                  <label class="" for="name">Full Name*</label>
+                  <input type="name" name="name" id="name" required />
+                </div>
+                <div class="form-field">
+                  <label class="" for="sex">Sex</label>
+                  <div>
+                    <label for="male"><input type="radio" name="sex" id="male" />&nbsp;
+                      Male</label>
+                    <label for="female" class=" ml-4"><input type="radio" name="sex" id="female" />&nbsp;
+                      Female</label>
+                  </div>
+                </div>
+                <div class="form-field">
+                  <label class="" for="location">Location</label>
+                  <select name="location" id="location">
+                    <option selected disabled>-select location-</option>
+                    <option value="">Aba</option>
+                    <option value="">Port Harcourt</option>
+                    <option value="">Enugu</option>
+                    <option value="">Owerri</option>
+                    <option value="">Boni</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label class="" for="email">Email Address*</label>
+                  <input type="email" name="email" id="email" />
+                </div>
+                <div class="form-field">
+                  <label class="" for="package">Package</label>
+                  <select name="package" id="package">
+                    <option selected disabled>-select package-</option>
+                    <option value="basic">Basic</option>
+                    <option value="premium">Premium</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="amount">Amount*</label>
+                  <input type="amount" name="amount" id="amount" />
+                </div>
+                <div class="form-field">
+                  <label for="username">Username*</label>
+                  <input type="username" name="username" id="username" />
+                </div>
+                <div class="form-field">
+                  <label for="password">Password*</label>
+                  <input type="password" name="password" id="password" />
+                </div>
+                <div class="form-field">
+                  <label for="confirm_password">Confirm Password*</label>
+                  <input type="password" name="confirm_password" id="confirm_password" />
+                </div>
+
+                <button class="form-button">
+                  Create My Account
+                </button>
+              </form>
+              <form action="" class="hidden w-full h-full px-4 md:w-4/5" id="with-bank" data-validate>
+                <div class="form-field">
+                  <label class="" for="name">Full Name*</label>
+                  <input type="name" name="name" id="name" required data-error="Full name is required" />
+                  <p class="error-msg hidden"></p>
+                </div>
+                <div class="form-field">
+                  <label class="" for="sex">Sex</label>
+                  <div>
+                    <label for="male"><input type="radio" name="sex" id="male" />&nbsp;
+                      Male</label>
+                    <label for="female" class=" ml-4"><input type="radio" name="sex" id="female" />&nbsp;
+                      Female</label>
+                  </div>
+                </div>
+                <div class="form-field">
+                  <label class="" for="location">Location</label>
+                  <select name="location" id="location">
+                    <option selected disabled>-select location-</option>
+                    <option value="">Aba</option>
+                    <option value="">Port Harcourt</option>
+                    <option value="">Enugu</option>
+                    <option value="">Owerri</option>
+                    <option value="">Boni</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label class="" for="email">Email Address*</label>
+                  <input type="email" name="email" id="email" />
+                </div>
+                <div class="form-field">
+                  <label class="" for="package">Package</label>
+                  <select name="package" id="package">
+                    <option selected disabled>-select package-</option>
+                    <option value="basic">Basic</option>
+                    <option value="premium">Premium</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="amount">Amount*</label>
+                  <input type="amount" name="amount" id="amount" />
+                </div>
+                <div class="form-field" data-file>
+                  <label for="teller">Upload Proof of Payment*</label>
+                  <div class=" border border-gray-300 relative flex">
+                    <span class="px-4 py-3 inline-flex flex-1 info truncate"></span>
+                    <span
+                      class="py-3 px-4 inline-flex items-center bg-gray-300 border border-gray-400 text-gray-600">Choose
+                      File</span>
+                    <input type="file" class="absolute w-full h-full opacity-0" name="teller" id="teller" />
+                  </div>
+                </div>
+                <div class="form-field">
+                  <label for="username">Username*</label>
+                  <input type="username" name="username" id="username" />
+                </div>
+                <div class="form-field">
+                  <label for="password">Password*</label>
+                  <input type="password" name="password" id="password" />
+                </div>
+                <div class="form-field">
+                  <label for="confirm_password">Confirm Password*</label>
+                  <input type="password" name="confirm_password" id="confirm_password" />
+                </div>
+
+                <button class="form-button">
+                  Create My Account
+                </button>
+
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/validate.js"></script>
+</body>
+
+</html>

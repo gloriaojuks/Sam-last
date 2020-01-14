@@ -1,0 +1,16 @@
+.dataTables_filter input {
+  border-bottom: 1px solid #ccc;
+}
+.dataTable{
+    padding-top: 1rem !important;
+}
+.dataTable th {
+  text-align: left;
+  font-weight: normal !important;
+}
+.dataTables_length select {
+  padding: 0.3rem 0.4rem;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}

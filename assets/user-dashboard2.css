@@ -1,0 +1,5 @@
+/* body .btn_box{margin-top: 100px;} */
+.btn_box{margin-top: 100px;}
+#btn1{float: right; background: #F5692C; border: none;}
+#btn2{float: right;margin-right: 20px; border:none; background: #F3F3F3; color: #6A707E;}
+.dashboard_heading{margin-left: 100px;}

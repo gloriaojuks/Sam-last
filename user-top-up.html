@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Dashboard Layout</title>
+  <link rel="stylesheet" href="assets/css/materialdesignicons.min.css" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="/assets/polyfill.min.js"></script>
+  <script src="/assets/proxy.min.js"></script>
+  <script src="/assets/alpine.js" defer></script>
+
+</head>
+
+<body>
+  <div class="top-up h-full w-full bg-primary fixed flex">
+
+    <aside class="sidebar w-64 h-full">
+      <div class="flex items-end px-8 h-16 relative">
+        <a href="/" class=""><img class="" width="126" height="35" src="/assets/img/logo.png" alt="" /></a>
+        <button class="inline-flex md:hidden h-10 items-center justify-center px-4 absolute top-0 right-0"
+          onclick="sidebar.classList.toggle('open')">
+          <i class="mdi mdi-close text-2xl"></i>
+        </button>
+
+      </div>
+
+      <div class="border-r border-gray-100 overflow-y-auto pt-12 px-8" style="height: calc(100% - 4rem);">
+        <a href="" class="sidebar-link active">
+          <i class="mdi mdi-view-dashboard"></i>
+          <span>Dashboard</span>
+        </a>
+        <div class="mt-6">
+          MY ACCOUNT
+        </div>
+        <a href="" class="sidebar-link">
+          <i class="mdi mdi-account-card-details"></i>
+          <span>My Profile</span>
+        </a>
+        <a href="" class="sidebar-link">
+          <i class="mdi mdi-pencil"></i>
+          <span>New Account</span>
+        </a>
+        <a href="" class="sidebar-link">
+          <i class="mdi mdi-wallet"></i>
+          <span>Account Overview</span>
+        </a>
+        <a href="/user-top-up.html" class="sidebar-link active">
+          <i class="mdi mdi-arrow-up-bold-circle"></i>
+          <span>Top Up</span>
+        </a>
+        <div class="mt-6">
+          MY Money
+        </div>
+        <a href="" class="sidebar-link">
+          <i class="mdi mdi-cash"></i>
+          <span>Payouts</span>
+        </a>
+        <a href="" class="sidebar-link">
+          <i class="mdi mdi-cash"></i>
+          <span>Deposits</span>
+        </a>
+        <div class="mt-6">
+          MY Document
+        </div>
+        <a href="/user-mou.html" class="sidebar-link">
+          <i class="mdi mdi-file-document"></i>
+          <span>MOU</span>
+        </a>
+        <div class="mt-6">
+          CLIENT SUPPORT
+        </div>
+        <a href="" class="sidebar-link">
+          <i class="mdi mdi-message-text"></i>
+          <span>Live Chat</span>
+        </a>
+      </div>
+    </aside>
+    <div class="h-full flex-1">
+      <header class="flex items-center pr-8 pl-2 h-16 justify-between w-full">
+        <button class="inline-flex md:hidden h-10 items-center justify-center px-4"
+          onclick="sidebar.classList.toggle('open')">
+          <i class="mdi mdi-menu text-2xl"></i>
+        </button>
+        <form
+          class="hidden md:inline-flex lg:w-search-input h-10 bg-white rounded-lg overflow-y-auto shadow focus:shadow-md">
+          <i class="mdi mdi-magnify h-full w-10 inline-flex justify-center items-center text-gray-400"></i>
+          <input type="search" class="flex-1 h-full pr-4 outline-none" />
+        </form>
+        <div class="pr-4 flex">
+          <div class="relative" data-dropdown>
+            <button class=" w-10 h-10 inline-flex items-center justify-center" data-drop-toggle>
+              <i class="mdi mdi-email text-2xl"></i>
+            </button>
+            <div class="shadow-md absolute bg-white w-64 rounded hidden right-0 overflow-hidden" data-drop-content>
+              <div class="p-2 bg-l-orange text-white">
+                Messages
+              </div>
+              <div class="p-2 flex w-full  hover:bg-gray-100 cursor-pointer">
+                <div class="w-10 h-10 rounded-lg overflow-hidden">
+                  <img class="w-full h-full" src="assets/img/girl-smilling.jpeg" />
+                </div>
+                <div class="pl-4 flex-1 overflow-hidden">
+                  <div class=" text-sm">Frederick Damasus</div>
+                  <p class="truncate w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, consequatur!
+                  </p>
+                  <time class=" text-xs">38 min ago </time>
+                </div>
+              </div>
+              <div class="p-2 flex w-full  hover:bg-gray-100 cursor-pointer">
+                <div class="w-10 h-10 rounded-lg overflow-hidden">
+                  <img class="w-full h-full" src="assets/img/girl-smilling.jpeg" />
+                </div>
+                <div class="pl-4 flex-1 overflow-hidden">
+                  <div class=" text-sm">Frederick Damasus</div>
+                  <p class="truncate w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, consequatur!
+                  </p>
+                  <time class=" text-xs">38 min ago </time>
+                </div>
+              </div>
+              <div class="p-2 flex w-full  hover:bg-gray-100 cursor-pointer">
+                <div class="w-10 h-10 rounded-lg overflow-hidden">
+                  <img class="w-full h-full" src="assets/img/girl-smilling.jpeg" />
+                </div>
+                <div class="pl-4 flex-1 overflow-hidden">
+                  <div class=" text-sm">Frederick Damasus</div>
+                  <p class="truncate w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, consequatur!
+                  </p>
+                  <time class=" text-xs">38 min ago </time>
+                </div>
+              </div>
+              <div class="py-2 text-center">
+                <a href="">See All</a>
+              </div>
+            </div>
+          </div>
+          <div class="relative" data-dropdown>
+            <button class=" w-10 h-10 inline-flex items-center justify-center" data-drop-toggle>
+              <i class="mdi mdi-bell text-2xl"></i>
+            </button>
+            <div class="shadow-md absolute bg-white w-64 rounded hidden right-0 overflow-hidden" data-drop-content>
+              <div class="p-2 bg-l-orange text-white">
+                Notifications
+              </div>
+              <div class="p-2 w-full overflow-hidden hover:bg-gray-100 cursor-pointer">
+                <p class="truncate w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, consequatur!
+                </p>
+                <time class=" text-xs">38 min ago </time>
+              </div>
+              <div class="p-2 w-full overflow-hidden hover:bg-gray-100 cursor-pointer">
+                <p class="truncate w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, consequatur!
+                </p>
+                <time class=" text-xs">38 min ago </time>
+              </div>
+              <div class="p-2 w-full overflow-hidden hover:bg-gray-100 cursor-pointer">
+                <p class="truncate w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, consequatur!
+                </p>
+                <time class=" text-xs">38 min ago </time>
+              </div>
+              <div class="py-2 text-center">
+                <a href="">See All</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="ml-4 relative" data-dropdown>
+            <div class="inline-flex" data-drop-toggle>
+              <div class="w-10 h-10 rounded-lg overflow-hidden">
+                <img class="w-full h-full" src="assets/img/girl-smilling.jpeg" />
+              </div>
+              <div class="pl-4 pr-6 ">
+                <div class=" text-sm">Frederick Damasus</div>
+                <div class=" text-xs">member</div>
+                <i class="mdi mdi-chevron-down absolute text-xl right-0" style="top: 40%;"></i>
+              </div>
+            </div>
+            <div class="drop-content hidden" data-drop-content>
+              <a href="#" class="w-full inline-flex h-8  hover:bg-gray-200 px-4 items-center">Sign out</a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="pl-2 pr-8 pt-4 w-full overflow-y-auto" style="height: calc(100% - 80px);">
+        <div class="h-8 w-full bg-l-orange"></div>
+        <div class="py-4">
+          <h2 class="text-xl">Top Up</h2>
+        </div>
+        <main class="w-full">
+          <div class=" w-full h-full md:w-2/3 bg-white p-6 shadow rounded">
+            <div class="mb-12">
+              <h3 class=" text-lg font-light">Top up your investment</h3>
+              <p class="font-thin text-sm text-gray-600">Select your payment method, pay via Paystack or Direct bank
+                deposit/Transfer</p>
+            </div>
+            <div x-data="{payType:'paystack'}">
+              <div class="w-full md:w-4/5 flex">
+                <div class="pay-type-toggle" x-bind:class="{active:payType==='paystack'}"
+                  x-on:click="payType = 'paystack'"><span>Paystack</span></div>
+                <div class="pay-type-toggle" x-bind:class="{active:payType==='bank'}" x-on:click="payType = 'bank'">
+                  <span>Bank Deposit/Transfer</span></div>
+              </div>
+              <div class="flex flex-wrap mt-12">
+                <div class="w-full md:w-1/2">
+                  <form action="" x-show="payType === 'bank'">
+                    <div class="form-field">
+                      <label class="" for="package">Package</label>
+                      <select name="package" id="package">
+                        <option selected disabled>-select package-</option>
+                        <option value="">Aba</option>
+                        <option value="">Port Harcourt</option>
+                        <option value="">Enugu</option>
+                        <option value="">Owerri</option>
+                        <option value="">Boni</option>
+                      </select>
+                    </div>
+                    <div class="form-field">
+                      <label class="" for="amount">Amount</label>
+                      <input type="number" name="amount" id="amount" required data-error="Amount is required" />
+                      <p class="error-msg hidden"></p>
+                    </div>
+                    <div class="form-field" data-file>
+                      <label for="teller">Upload Proof of Payment</label>
+                      <div class=" border border-gray-300 relative flex">
+                        <span class="px-4 py-3 inline-flex flex-1 info truncate"></span>
+                        <span
+                          class="py-3 px-4 inline-flex items-center bg-gray-300 border border-gray-400 text-gray-600">Choose
+                          File</span>
+                        <input type="file" class="absolute w-full h-full opacity-0" name="teller" id="teller" />
+                      </div>
+                    </div>
+                    <div class="mt-8">
+                      <button class="form-button">
+                        Top Up
+                      </button>
+                    </div>
+
+                  </form>
+                  <form action="" x-show="payType === 'paystack'">
+                    <div class="form-field">
+                      <label class="" for="package">Package</label>
+                      <select name="package" id="package">
+                        <option selected disabled>-select package-</option>
+                        <option value="">Aba</option>
+                        <option value="">Port Harcourt</option>
+                        <option value="">Enugu</option>
+                        <option value="">Owerri</option>
+                        <option value="">Boni</option>
+                      </select>
+                    </div>
+                    <div class="form-field">
+                      <label class="" for="amount">Amount</label>
+                      <input type="number" name="amount" id="amount" required data-error="Amount is required" />
+                      <p class="error-msg hidden"></p>
+                    </div>
+                   
+                    <div class="mt-8">
+                      <button class="form-button">
+                        Top Up
+                      </button>
+                    </div>
+
+                  </form>
+                </div>
+                <div class="w-full md:ml-auto md:w-2/5 pl-2">
+                  <div  x-show="payType === 'bank'">
+                    <h3 class="font-semibold text-lg text-center text-ui-text-lite py-5">Make payment and attach proof of
+                      payment</h3>
+                    <p class=" text-sm"><a href="">Click here for Bank Details for Deposits</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/dropdown.js"></script>
+</body>
+
+</html>

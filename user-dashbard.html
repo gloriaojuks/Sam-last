@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Dashboard Layout</title>
+    <link rel="stylesheet" href="assets/css/materialdesignicons.min.css" />
+    <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+    <div class="h-full w-full bg-primary fixed flex">
+        <aside class="sidebar w-64 h-full" id="sidebar">
+            <div class="flex items-end px-8 h-16 relative">
+                <a href="/" class=""><img class="" width="126" height="35" src="/assets/img/logo.png" alt="" /></a>
+                <button class="inline-flex md:hidden h-10 items-center justify-center px-4 absolute top-0 right-0"
+                    onclick="sidebar.classList.toggle('open')">
+                    <i class="mdi mdi-close text-2xl"></i>
+                </button>
+
+            </div>
+
+            <div class="overflow-y-auto pt-12 px-8" style="height: calc(100% - 4rem);">
+                <a href="" class="sidebar-link active">
+                    <i class="mdi mdi-view-dashboard"></i>
+                    <span>Dashboard</span>
+                </a>
+                <div class="mt-6">
+                    MY ACCOUNT
+                </div>
+                <a href="" class="sidebar-link">
+                    <i class="mdi mdi-account-card-details"></i>
+                    <span>My Profile</span>
+                </a>
+                <a href="" class="sidebar-link">
+                    <i class="mdi mdi-pencil"></i>
+                    <span>New Account</span>
+                </a>
+                <a href="" class="sidebar-link">
+                    <i class="mdi mdi-wallet"></i>
+                    <span>Account Overview</span>
+                </a>
+                <a href="/user-top-up.html" class="sidebar-link">
+                    <i class="mdi mdi-arrow-up-bold-circle"></i>
+                    <span>Top Up</span>
+                </a>
+                <div class="mt-6">
+                    MY Money
+                </div>
+                <a href="" class="sidebar-link">
+                    <i class="mdi mdi-cash"></i>
+                    <span>Payouts</span>
+                </a>
+                <a href="" class="sidebar-link">
+                    <i class="mdi mdi-cash"></i>
+                    <span>Deposits</span>
+                </a>
+                <div class="mt-6">
+                    MY Document
+                </div>
+                <a href="/user-mou.html" class="sidebar-link">
+                    <i class="mdi mdi-file-document"></i>
+                    <span>MOU</span>
+                </a>
+                <div class="mt-6">
+                    CLIENT SUPPORT
+                </div>
+                <a href="" class="sidebar-link">
+                    <i class="mdi mdi-message-text"></i>
+                    <span>Live Chat</span>
+                </a>
+            </div>
+        </aside>
+        <div class="h-full flex-1">
+            <header class="flex items-center pr-8 pl-2 h-16 justify-between w-full">
+                <button class="inline-flex md:hidden h-10 items-center justify-center px-4"
+                    onclick="sidebar.classList.toggle('open')">
+                    <i class="mdi mdi-menu text-2xl"></i>
+                </button>
+                <form
+                    class="hidden md:inline-flex lg:w-search-input h-10 bg-white rounded-lg overflow-y-auto shadow focus:shadow-md">
+                    <i class="mdi mdi-magnify h-full w-10 inline-flex justify-center items-center text-gray-400"></i>
+                    <input type="search" class="flex-1 h-full pr-4 outline-none" />
+                </form>
+                <div class="pr-4 flex">
+                    <div class="relative" data-dropdown>
+                        <button class=" w-10 h-10 inline-flex items-center justify-center" data-drop-toggle>
+                            <i class="mdi mdi-email text-2xl"></i>
+                        </button>
+                        <div class="shadow-md absolute bg-white w-64 rounded hidden right-0 overflow-hidden"
+                            data-drop-content>
+                            <div class="p-2 bg-l-orange text-white">
+                                Messages
+                            </div>
+                            <div class="p-2 flex w-full  hover:bg-gray-100 cursor-pointer">
+                                <div class="w-10 h-10 rounded-lg overflow-hidden">
+                                    <img class="w-full h-full" src="assets/img/girl-smilling.jpeg" />
+                                </div>
+                                <div class="pl-4 flex-1 overflow-hidden">
+                                    <div class=" text-sm">Frederick Damasus</div>
+                                    <p class="truncate w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Quae, consequatur!
+                                    </p>
+                                    <time class=" text-xs">38 min ago </time>
+                                </div>
+                            </div>
+                            <div class="p-2 flex w-full  hover:bg-gray-100 cursor-pointer">
+                                <div class="w-10 h-10 rounded-lg overflow-hidden">
+                                    <img class="w-full h-full" src="assets/img/girl-smilling.jpeg" />
+                                </div>
+                                <div class="pl-4 flex-1 overflow-hidden">
+                                    <div class=" text-sm">Frederick Damasus</div>
+                                    <p class="truncate w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Quae, consequatur!
+                                    </p>
+                                    <time class=" text-xs">38 min ago </time>
+                                </div>
+                            </div>
+                            <div class="p-2 flex w-full  hover:bg-gray-100 cursor-pointer">
+                                <div class="w-10 h-10 rounded-lg overflow-hidden">
+                                    <img class="w-full h-full" src="assets/img/girl-smilling.jpeg" />
+                                </div>
+                                <div class="pl-4 flex-1 overflow-hidden">
+                                    <div class=" text-sm">Frederick Damasus</div>
+                                    <p class="truncate w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Quae, consequatur!
+                                    </p>
+                                    <time class=" text-xs">38 min ago </time>
+                                </div>
+                            </div>
+                            <div class="py-2 text-center">
+                                <a href="">See All</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative" data-dropdown>
+                        <button class=" w-10 h-10 inline-flex items-center justify-center" data-drop-toggle>
+                            <i class="mdi mdi-bell text-2xl"></i>
+                        </button>
+                        <div class="shadow-md absolute bg-white w-64 rounded hidden right-0 overflow-hidden"
+                            data-drop-content>
+                            <div class="p-2 bg-l-orange text-white">
+                                Notifications
+                            </div>
+                            <div class="p-2 w-full overflow-hidden hover:bg-gray-100 cursor-pointer">
+                                <p class="truncate w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Quae, consequatur!
+                                </p>
+                                <time class=" text-xs">38 min ago </time>
+                            </div>
+                            <div class="p-2 w-full overflow-hidden hover:bg-gray-100 cursor-pointer">
+                                <p class="truncate w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Quae, consequatur!
+                                </p>
+                                <time class=" text-xs">38 min ago </time>
+                            </div>
+                            <div class="p-2 w-full overflow-hidden hover:bg-gray-100 cursor-pointer">
+                                <p class="truncate w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Quae, consequatur!
+                                </p>
+                                <time class=" text-xs">38 min ago </time>
+                            </div>
+                            <div class="py-2 text-center">
+                                <a href="">See All</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="ml-4 relative" data-dropdown>
+                        <div class="inline-flex" data-drop-toggle>
+                            <div class="w-10 h-10 rounded-lg overflow-hidden">
+                                <img class="w-full h-full" src="assets/img/girl-smilling.jpeg" />
+                            </div>
+                            <div class="pl-4 pr-6 ">
+                                <div class=" text-sm">Frederick Damasus</div>
+                                <div class=" text-xs">member</div>
+                                <i class="mdi mdi-chevron-down absolute text-xl right-0" style="top: 40%;"></i>
+                            </div>
+                        </div>
+                        <div class="drop-content hidden" data-drop-content>
+                            <a href="#" class="w-full inline-flex h-8  hover:bg-gray-200 px-4 items-center">Sign out</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="pl-2 pr-8 pt-4 w-full overflow-y-auto" style="height: calc(100% - 80px);">
+                <div class="h-8 w-full bg-l-orange"></div>
+                <div class="py-4">
+                    <h2 class="text-xl">Dashboard</h2>
+                </div>
+                <main class="w-full h-full flex flex-wrap mb-8">
+                    <div class="lg:w-2/3 w-full">
+                        <div class="flex justify-between">
+                            <div
+                                class="shadow bg-white rounded-lg h-20 w-f-w flex items-center justify-between px-4 hover:shadow-md cursor-pointer">
+                                <span>Deposits</span>
+                                <i class="mdi mdi-cash text-3xl text-green-600"></i>
+                            </div>
+                            <div
+                                class="shadow bg-white rounded-lg h-20 w-f-w flex items-center justify-between px-4 hover:shadow-md cursor-pointer">
+                                <span>Document</span>
+                                <i class="mdi mdi-file-document text-3xl"></i>
+                            </div>
+                            <div
+                                class="shadow bg-white rounded-lg h-20 w-f-w flex items-center justify-between px-4 hover:shadow-md cursor-pointer">
+                                <span>Top Up</span>
+                                <i class="mdi mdi-arrow-up-bold-circle text-3xl text-l-orange"></i>
+                            </div>
+                            <div
+                                class="shadow bg-white rounded-lg h-20 w-f-w flex items-center justify-between px-4 hover:shadow-md cursor-pointer">
+                                <span>New Account</span>
+                                <i class="mdi mdi-pencil text-3xl"></i>
+                            </div>
+                        </div>
+                        <div class="w-full shadow rounded-lg bg-white mt-6 pb-2">
+                            <div class="h-16 flex items-center px-4">
+                                My Accounts
+                            </div>
+                            <table class="dashboard-table w-full border-collapse">
+                                <thead>
+                                    <tr>
+                                        <th>S/n</th>
+                                        <th>Account Name</th>
+                                        <th>Package</th>
+                                        <th>Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>Duplex Invest</td>
+                                        <td>Platinum</td>
+                                        <td>NGN70,000</td>
+                                    </tr>
+                                    <tr class="bg-gray-200">
+                                        <td>01</td>
+                                        <td>Duplex Invest</td>
+                                        <td>Platinum</td>
+                                        <td>NGN70,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="w-full shadow rounded-lg bg-white mt-6 pb-2">
+                            <div class="h-16 flex items-center px-4">
+                                Payouts
+                            </div>
+                            <table class="dashboard-table w-full border-collapse">
+                                <thead>
+                                    <tr>
+                                        <th>S/n</th>
+                                        <th>Amount</th>
+                                        <th>Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>NGN20,000</td>
+                                        <td class="text-gray-500">10th Dec, 2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>02</td>
+                                        <td>NGN10,000</td>
+                                        <td class="text-gray-500">5 Dec, 2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>03</td>
+                                        <td>NGN12,000</td>
+                                        <td class="text-gray-500">10th Nov, 2019</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="w-full shadow rounded-lg bg-white my-6 pb-2">
+                            <div class="h-16 flex items-center px-4">
+                                Packages
+                            </div>
+                            <table class="dashboard-table w-full border-collapse">
+                                <thead>
+                                    <tr>
+                                        <th>S/n</th>
+                                        <th>Name</th>
+                                        <th>Returns</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>Executive Pro</td>
+                                        <td class="text-gray-500">25%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>02</td>
+                                        <td>Platinum</td>
+                                        <td class="text-gray-500">20%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>03</td>
+                                        <td>Gold</td>
+                                        <td class="text-gray-500">10%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/3 w-full lg:pl-6">
+                        <div class=" w-full h-64 rounded-lg bg-gray-600 shadow mb-6"></div>
+                        <div class=" w-full rounded-lg shadow mb-6 px-8 bg-white">
+                            <div class="h-12 text-gray-600 flex items-center">
+                                News Feed
+                            </div>
+                            <div class="flex items-center pb-4">
+                                <div
+                                    class="w-12 h-12 rounded-full items-center justify-center inline-flex bg-orange-lighter">
+                                    <i class="mdi mdi-rss-box text-lg text-orange-lite"></i>
+                                </div>
+                                <div class="flex-1 pl-4" style="width: calc(100% - 3rem);">
+                                    <h3 class="truncate text-sm">Investment opportunities in Asia</h3>
+                                    <time class="text-xs text-gray-400">12 min ago</time>
+                                </div>
+                            </div>
+                            <div class="flex items-center pb-4">
+                                <div
+                                    class="w-12 h-12 rounded-full items-center justify-center inline-flex bg-orange-lighter">
+                                    <i class="mdi mdi-rss-box text-lg text-orange-lite"></i>
+                                </div>
+                                <div class="flex-1 pl-4" style="width: calc(100% - 3rem);">
+                                    <h3 class="truncate text-sm">How to invest in Gold</h3>
+                                    <time class="text-xs text-gray-400">38 min ago</time class="text-xs text-gray-400">
+                                </div>
+                            </div>
+                            <div class="flex items-center pb-4">
+                                <div
+                                    class="w-12 h-12 rounded-full items-center justify-center inline-flex bg-orange-lighter">
+                                    <i class="mdi mdi-rss-box text-lg text-orange-lite"></i>
+                                </div>
+                                <div class="flex-1 pl-4" style="width: calc(100% - 3rem);">
+                                    <h3 class="truncate text-sm">New business today</h3>
+                                    <time class="text-xs text-gray-400">52 min ago</time>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/dropdown.js"></script>
+</body>
+</html>
